@@ -29,7 +29,7 @@ class JokeList extends Component {
             });
             let newJoke = res.data.joke;
             if(this.seenJokes.has(newJoke)) {
-                jokes.push({ id: uuid(), text: res.data.joke, votes: 0 });
+                jokes.push({ id: uuid(), text: newJoke, votes: 0 });
             } else {
                 console.log("FOUND DUPLICATE");
                 console.log(newJoke);
