@@ -28,7 +28,7 @@ class JokeList extends Component {
                 headers: { Accept: "application/json" }
             });
             let newJoke = res.data.joke;
-            if(this.seenJokes.has(newJoke)) {
+            if(!this.seenJokes.has(newJoke)) {
                 jokes.push({ id: uuid(), text: newJoke, votes: 0 });
             } else {
                 console.log("FOUND DUPLICATE");
